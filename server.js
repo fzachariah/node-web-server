@@ -52,6 +52,12 @@ app.get('/projects',function(req,res){
 
 });
 
+app.get('/test',function(req,res){
+
+    res.send({name:"Febin",result:{name:"server"}});
+
+});
+
 
 app.get('/bad',function(req,res){
 
