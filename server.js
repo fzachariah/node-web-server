@@ -21,15 +21,8 @@ app.use(function(req,res,next){
 });
 
 
-//app.use(function(req,res,next){
-//    
-//    res.render("maintence.hbs")
-//
-//});
-
-
-
 app.use(express.static(__dirname+'/public'));
+
 hbs.registerHelper('getCurrentyear',function(){
     return new Date().getFullYear();
 });
@@ -52,6 +45,13 @@ app.get('/about',function(req,res){
     res.render('about.hbs',{pageTitle:'About Page'});
 
 });
+
+app.get('/projects',function(req,res){
+
+    res.render('projects.hbs',{pageTitle:'Portfolio Page'});
+
+});
+
 
 app.get('/bad',function(req,res){
 
